@@ -18,12 +18,12 @@ namespace Http {
         RequestHandler(const RequestHandler &) = delete;
         RequestHandler& operator=(const RequestHandler &) = delete;
 
-        explicit RequestHandler(const std::string &doc_root);
+        explicit RequestHandler(const std::string &work_dir_path);
 
         void handle_request(const Request &request, Reply &reply);
     private:
 
-        std::string doc_root;
+        std::string work_directory;
         static bool url_decode(const std::string &in, std::string &out);
 
 

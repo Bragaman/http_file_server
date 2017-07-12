@@ -18,7 +18,7 @@ namespace Http {
         Server(const Server&) = delete;
         Server& operator=(const Server&) = delete;
 
-        Server(const std::string &host, const std::string &port, const std::string &doc_root);
+        Server(const std::string &host, const std::string &port, const std::string &work_dir);
 
         void run();
     private:

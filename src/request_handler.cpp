@@ -12,8 +12,8 @@
 
 namespace Http {
 
-    RequestHandler::RequestHandler(const std::string &doc_root)
-        : doc_root(doc_root)
+    RequestHandler::RequestHandler(const std::string &work_dir_path)
+        : work_directory(work_dir_path)
     {
 
     }
@@ -51,7 +51,7 @@ namespace Http {
         }
 
         // Open the file to send back.
-        std::string full_path = doc_root + request_path;
+        std::string full_path = work_directory + request_path;
         std::ifstream is(full_path.c_str(), std::ios::in | std::ios::binary);
         if (!is)
         {
