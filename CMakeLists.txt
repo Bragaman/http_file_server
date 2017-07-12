@@ -10,7 +10,7 @@ if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
 endif()
 
-set(SOURCE_FILES src/main.cpp)
+set(SOURCE_FILES src/main.cpp src/server.cpp src/server.h)
 add_executable(http_file_server ${SOURCE_FILES})
 target_link_libraries(http_file_server
         ${Boost_LOG_SETUP_LIBRARY}
